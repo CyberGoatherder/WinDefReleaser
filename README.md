@@ -18,7 +18,7 @@ Small python tool to decrypt files quarantined by windows defender. This has bee
 |_____|_|_|_|____/|___|_| |__|__|___|_|___|__,|___|___|_|
 
 
-usage: 1windef.py [-h] [-o OUTPUT] path
+usage: WinDefReleaser.py [-h] [-o OUTPUT] path
 
 Windows Defender Releaser
 
@@ -46,7 +46,7 @@ User@User: python WinDefReleaser.py ENCRYPTEDFILE50
 
 
 Selected File: 'ENCRYPTEDFILE50'
-Selected Output Folder: '/home/user/Documents/windef/'
+Selected Output Folder: '/home/user/Documents/'
 
 [+] Decrypted file (+ Metadata) saved to: '/home/user/Documents/ENCRYPTEDFILE50_decrypted_meta.bin'
 [I] Aproximitely 250 bytes of defender metadata has been prepended to the original file. Look for magic bytes around 250 bytes in to see the start of the quarantined file.
