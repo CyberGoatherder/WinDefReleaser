@@ -12,26 +12,23 @@ Python tool to parse and decrypt files quarantined by windows defender. Useful f
 ### Usage
 
 ```
- _ _ _ _     ____      ___ _____     _
-| | | |_|___|    \ ___|  _| __  |___| |___ ___ ___ ___ ___
-| | | | |   |  |  | -_|  _|    -| -_| | -_| .'|_ -| -_|  _|
-|_____|_|_|_|____/|___|_| |__|__|___|_|___|__,|___|___|_|
-
-
-usage: WinDefReleaser.py [-h] [-o OUTPUT] path
+usage: WinDefReleaser.py [-h] [-d] [-o OUTPUT] [-m MODE] path
 
 Windows Defender Releaser
 
 positional arguments:
-  path                  Input filepath, the quarantined file you want to decrypt
+  path                  input filepath, the 'Quarantine' folder you want to parse
 
 optional arguments:
   -h, --help            show this help message and exit
+  -d, --dump            decrypt and dump all entries into a pw protected .ZIP (pw: infected)
   -o OUTPUT, --output OUTPUT
-                        Output folder path
+                        output folder path
+  -m MODE, --mode MODE  hashing mode: md5/sha1/sha256, default is sha1
+
 
 Example:
-python WinDefReleaser.py /path/to/quarantinedfile
+python WinDefReleaser.py /path/to/Quarantine
 ```
 
 ### Example
