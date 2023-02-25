@@ -1,6 +1,8 @@
 # WinDefReleaser
 Python tool to parse and decrypt files quarantined by windows defender. Useful for security analysts and incident responders looking to review the original file(s) windows defender alerted on.
 
+Each file entry is parsed in memory returning the original hash of the quarantined file along with the original filepath and threat name given after detection. Optionally use the "-d" flag to dump files to a password protected .ZIP (infected) in their original form. 
+
 ### Credits
 
 **Standing on the shoulders of giants** - This tool builds upon the amazing work of @knez and their [defender-dump](https://github.com/knez/defender-dump) tool. Now functional against any target path, hashing entries in memory and optionally outputting to an encrypted .ZIP. RC4 decryption routine also forked from [quarantine.py](https://raw.githubusercontent.com/brad-accuvant/cuckoo-modified/00ad13c94cc7453c40ed6152d16009ca1c8ed6f2/lib/cuckoo/common/quarantine.py) from the cuckoosandbox project.
