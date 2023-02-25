@@ -42,4 +42,4 @@ python WinDefReleaser.py /path/to/Quarantine
 
 ### Example
 
-![Example use of the tool.](/image/windef.png "Example use of the tool.")
+![Example use of the tool.](/image/windef_ex.png "Example use of the tool.")
