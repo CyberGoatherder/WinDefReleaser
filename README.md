@@ -1,5 +1,5 @@
 # WinDefReleaser
-Python tool to parse and decrypt files quarantined by windows defender. Useful for security analysts looking to review the original file windows defender alerted on.
+Python tool to parse and decrypt files quarantined by windows defender. Useful for security analysts and incident responders looking to review the original file(s) windows defender alerted on.
 
 ### Credits
 
@@ -10,6 +10,15 @@ Python tool to parse and decrypt files quarantined by windows defender. Useful f
 ---
 
 ### Usage
+
+After detection, a file is moved to the following path for quarantine:
+```
+C:\ProgramData\Microsoft\Windows Defender\Quarantine
+```
+- Detection metadata is stored in the 'Entries' subfolder
+- The original file is encrypted and stored in the 'ResourceData' subfolder
+
+Defender uses a hardcoded key to RC4 encrypt each file thus the operation can easily be reversed. To make use of this tool please retrieve the entire `\Quarantine` folder.
 
 ```
 usage: WinDefReleaser.py [-h] [-d] [-o OUTPUT] [-m MODE] path
@@ -33,20 +42,4 @@ python WinDefReleaser.py /path/to/Quarantine
 
 ### Example
 
-```
-User@User: python WinDefReleaser.py ENCRYPTEDFILE50
-
- _ _ _ _     ____      ___ _____     _
-| | | |_|___|    \ ___|  _| __  |___| |___ ___ ___ ___ ___
-| | | | |   |  |  | -_|  _|    -| -_| | -_| .'|_ -| -_|  _|
-|_____|_|_|_|____/|___|_| |__|__|___|_|___|__,|___|___|_|
-
-
-Selected File: 'ENCRYPTEDFILE50'
-Selected Output Folder: '/home/user/Documents/'
-
-[+] Decrypted file (+ Metadata) saved to: '/home/user/Documents/ENCRYPTEDFILE50_decrypted_meta.bin'
-[I] Aproximitely 250 bytes of defender metadata has been prepended to the original file. Look for magic bytes around 250 bytes in to see the start of the quarantined file.
-
-[+] Quitting...
-```
+![Example use of the tool.](/image/windef.png "Example use of the tool.")
