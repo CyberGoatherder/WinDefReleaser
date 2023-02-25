@@ -37,7 +37,7 @@ optional arguments:
 
 
 Example:
-python WinDefReleaser.py /path/to/Quarantine
+python WinDefReleaser.py /path/to/Quarantine -m sha256 -d -o /output/folder
 ```
 
 ### Example
