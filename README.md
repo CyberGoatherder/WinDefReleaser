@@ -5,7 +5,7 @@ Python tool to parse and decrypt files quarantined by windows defender. Useful f
 
 **Standing on the shoulders of giants** - This tool builds upon the amazing work of @knez and their [defender-dump](https://github.com/knez/defender-dump) tool. Now functional against any target path, hashing entries in memory and optionally outputting to an encrypted .ZIP. RC4 decryption routine also forked from [quarantine.py](https://raw.githubusercontent.com/brad-accuvant/cuckoo-modified/00ad13c94cc7453c40ed6152d16009ca1c8ed6f2/lib/cuckoo/common/quarantine.py) from the cuckoosandbox project.
 
-**Credit** to knez, KillerInstinct, Optiv, Inc and OALabs for the work this script builds upon.
+**Credit** to knez, KillerInstinct, Optiv, Inc and OALabs for the work this tool builds upon.
 
 ---
 
