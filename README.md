@@ -44,4 +44,4 @@ python WinDefReleaser.py /path/to/Quarantine -m sha256 -d -o /output/folder
 
 ### Example
 
-![Example use of the tool.](/image/windef_ex.png "Example use of the tool.")
+![Example use of the tool.](/image/windef_ex2.png "Example use of the tool.")
